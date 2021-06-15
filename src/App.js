@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Name from "./Name";
 
 function App() {
+  const name = [
+    {
+      name : 'ravi'
+    },
+    {
+      name : 'ravi1'
+    },
+    {
+      name : 'ravi2'
+    }
+  ]
+
+  const output = name.map( val => {
+    return <Name name={val.name} />
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     {output}
+    </>
   );
 }
 
